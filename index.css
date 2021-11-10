@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+html {
+    margin: auto;
+
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: calc(40px + 3vw + 1vh);
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+.container {
+    display: grid;
+    height:100%;
+    grid-template-columns: repeat(auto-fill, minmax(504px, 1fr));
+    justify-self: center;
+    align-items: center;
+}
+.image-div { 
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+.board-div { 
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.image {
+    mix-blend-mode:hard-light;
+    width: 400px;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 50%; 
+}
+.board {
+    margin: 5%;
+    width: 504px;
+    height: 504px;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(8, 63px);
+    grid-template-rows: repeat(8, 63px);
+    border: 5px solid rgb(99, 97, 97);
+    text-align: center;
+    overflow: visible;
+}
+.white {
+    padding: 0px;
+    background-color: rgb(58, 58, 58);
+    font-size: calc(24px + 3vw + 1vh);
+    text-align:center;
+}
+.black {
+    padding: 0px;
+    background-color: white; 
+    font-size: calc(24px + 3vw + 1vh);
+    text-align:center;
+}
+
+
+.black-piece {
+    position: relative;
+    z-index:100; 
+    cursor:pointer;
+    color: black;
+    text-shadow: 3px 4px 0px rgb(8, 183, 183);
+    bottom: 1vw;
+    touch-action: none;
+    user-select: none;
+}
+.white-piece {
+    position: relative;
+    z-index: 100; 
+    cursor: pointer;
+    color: black;
+    text-shadow: 3px 4px 0px rgb(164, 0, 177, 1);
+    bottom: 1vw;
+    touch-action: none;
+    user-select: none;
+}
